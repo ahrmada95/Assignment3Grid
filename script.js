@@ -22,6 +22,8 @@ function addR() {
         cell.style.backgroundColor = 'white'
         //iterate num of col count
         numCols += 1
+        //iterate num of row count
+        numRow += 1
     }
 
     //if there already are other columns, then just append as normal
@@ -59,7 +61,6 @@ function addC() {
             row.appendChild(td)
             cell = row.appendChild(td)
             cell.style.backgroundColor = 'white'
-            console.log("i am in row " + i)
         }
     }
     //iterate number of col
