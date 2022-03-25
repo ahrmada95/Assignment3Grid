@@ -38,7 +38,6 @@ function addR() {
     }
     //iterate num of row count
     numRows += 1
-    alert("Clicked Add Row"); // Replace this line with your code.
 }
 
 // Add a column
