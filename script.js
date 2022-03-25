@@ -64,7 +64,6 @@ function addC() {
     }
     //iterate number of col
     numCols += 1
-    alert("Clicked Add Col"); // Replace this line with your code.
 }
 
 // Remove a row
