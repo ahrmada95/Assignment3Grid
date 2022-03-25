@@ -1,4 +1,7 @@
 /* Ahnaf Ahmad */
+#grid {
+    border-collapse: collapse;
+}
 
 tr,td{
     border:1px;
