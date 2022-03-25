@@ -95,7 +95,6 @@ function fillU(){
             cell.style.backgroundColor = colorSelected
         }
     });
-    alert("Clicked Fill All Uncolored"); // Replace this line with your code.
 }
 
 // Fill all cells
