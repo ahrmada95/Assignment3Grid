@@ -7,7 +7,37 @@ let colorSelected;
 
 // Add a row
 function addR() {
-    alert("Clicked Add Row"); // Replace this line with your code.
+    //get table object and retrieve it from doc
+    const table = document.getElementById("grid")
+    //create row object and insert into the table at end
+    var row = table.insertRow(0)
+
+    //in case there is no columns, produce single column
+    if (numCols == 0){
+        //define table 
+        const td = document.createElement('td')
+        //create cell object and append to end of bottom row
+        cell = row.appendChild(td)
+        //set default color
+        cell.style.backgroundColor = 'white'
+        //iterate num of col count
+        numCols += 1
+    }
+
+    //if there already are other columns, then just append as normal
+    else{
+        //loop through and append
+        for (var i = 0; i < numCols; i++){
+            //define table 
+            const td = document.createElement('td')
+            //create cell object and append to end of bottom row
+            cell = row.appendChild(td)
+            //set default color
+            cell.style.backgroundColor = 'white'
+        }
+    }
+    //iterate num of row count
+    numRows += 1
 }
 
 // Add a column
