@@ -42,6 +42,28 @@ function addR() {
 
 // Add a column
 function addC() {
+    //get table object and retrieve it from doc
+    const table = document.getElementById("grid")
+    //get all rows
+    var rows = table.rows
+
+    //in case there are no columns, call addR function to initialize table
+    if (numCols == 0){
+        addR()
+    }
+
+    //else, append as normal 
+    else{
+        for (var i = 0, row; row = table.rows[i]; i++){
+            const td = document.createElement('td') 
+            row.appendChild(td)
+            cell = row.appendChild(td)
+            cell.style.backgroundColor = 'white'
+            console.log("i am in row " + i)
+        }
+    }
+    //iterate number of col
+    numCols += 1
     alert("Clicked Add Col"); // Replace this line with your code.
 }
 
