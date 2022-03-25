@@ -85,6 +85,16 @@ function selectColor(){
 
 // Fill all uncolored cells
 function fillU(){
+    //array var to hold all "cells" of the table from document
+    var fillUp = document.querySelectorAll('td')
+    //iterate through each cell
+    fillUp.forEach(cell => {
+        //check to see if it is a default color
+        if(cell.style.backgroundColor == 'white'){
+            //if it is, change to color selected
+            cell.style.backgroundColor = colorSelected
+        }
+    });
     alert("Clicked Fill All Uncolored"); // Replace this line with your code.
 }
 
