@@ -22,6 +22,8 @@ function addR() {
         cell.style.backgroundColor = 'white'
         //iterate num of col count
         numCols += 1
+        //iterate num of row count
+        numRow += 1
     }
 
     //if there already are other columns, then just append as normal
@@ -42,7 +44,27 @@ function addR() {
 
 // Add a column
 function addC() {
-    alert("Clicked Add Col"); // Replace this line with your code.
+    //get table object and retrieve it from doc
+    const table = document.getElementById("grid")
+    //get all rows
+    var rows = table.rows
+
+    //in case there are no columns, call addR function to initialize table
+    if (numCols == 0){
+        addR()
+    }
+
+    //else, append as normal 
+    else{
+        for (var i = 0, row; row = table.rows[i]; i++){
+            const td = document.createElement('td') 
+            row.appendChild(td)
+            cell = row.appendChild(td)
+            cell.style.backgroundColor = 'white'
+        }
+    }
+    //iterate number of col
+    numCols += 1
 }
 
 // Remove a row
