@@ -69,24 +69,27 @@ function addC() {
 
 // Remove a row
 function removeR() {
-    if (numRows == 0){
-        index = 0
-    }
-
-    else if (numRows == 1){
-        index = 1
-    }
-    else{
-        index = numRows - 1
-    }
     //get table object and retrieve it from doc
     const table = document.getElementById("grid").deleteRow(0)
-    alert("Clicked Remove Row"); // Replace this line with your code.
+    //reduce num of rows
+    numRows = numRows - 1
 }
 
 // Remove a column
 function removeC() {
-    alert("Clicked Remove Col"); // Replace this line with your code.
+    //get table object and retrieve it from doc
+    const table = document.getElementById("grid")
+
+    //if number of columns is greater than 0
+    if (numCols > 0){
+        //iterate through each row
+        for (var i = 0, row; row = table.rows[i]; i++){
+            //remove first spot of array of table
+            row.removeChild(row.cells[0])
+        }
+        //reduce num of cols
+        numCols = numCols - 1
+    }
 }
 
 // Set global variable for selected color
