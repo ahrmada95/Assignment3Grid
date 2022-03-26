@@ -69,6 +69,18 @@ function addC() {
 
 // Remove a row
 function removeR() {
+    if (numRows == 0){
+        index = 0
+    }
+
+    else if (numRows == 1){
+        index = 1
+    }
+    else{
+        index = numRows - 1
+    }
+    //get table object and retrieve it from doc
+    const table = document.getElementById("grid").deleteRow(0)
     alert("Clicked Remove Row"); // Replace this line with your code.
 }
 
