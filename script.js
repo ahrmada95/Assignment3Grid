@@ -20,6 +20,7 @@ function addR() {
         cell = row.appendChild(td)
         //set default color
         cell.style.backgroundColor = 'white'
+        cell.addEventListener("click", colorChange(cell))
         //iterate num of col count
         numCols += 1
         //iterate num of row count
@@ -34,6 +35,7 @@ function addR() {
             const td = document.createElement('td')
             //create cell object and append to end of bottom row
             cell = row.appendChild(td)
+            cell.addEventListener("click", colorChange(cell))
             //set default color
             cell.style.backgroundColor = 'white'
         }
@@ -132,4 +134,8 @@ function clearAll(){
         //change each color to white 
         cell.style.backgroundColor = 'white'
     });
+}
+
+function colorChange(element){
+    element.style.backgroundColor = colorSelected
 }
