@@ -110,5 +110,11 @@ function fillAll(){
 
 // Clear all cells
 function clearAll(){
-    alert("Clicked Clear All"); // Replace this line with your code.
+    //array var to hold all "cells" of the table from document
+    var fillUp = document.querySelectorAll('td')
+    //iterate through each cell
+    fillUp.forEach(cell => {
+        //change each color to white 
+        cell.style.backgroundColor = 'white'
+    });
 }
